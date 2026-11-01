@@ -10,7 +10,8 @@ end
 
 # Tail App Engine logs for a J2 service, picked with fzf.
 function logs --description 'Tail gcloud App Engine logs for a J2 service'
-    set -l service (printf '%s\n' j2-network-manger network-intel-dashboard network-intel-dashboard-qa network-intel-dashboard-staging \
+    # Ask gcloud for the services in the active project rather than hard-coding them.
+    set -l service (gcloud app services list --format='value(id)' \
         | fzf --reverse --height 40% --prompt "Which service logs would you like to see? ")
     test -n "$service"; or return 1
     gcloud app logs tail --service $service
