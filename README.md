@@ -10,7 +10,7 @@ extension (see "Adding your own layer" below).
 | | |
 |---|---|
 | **Claude Code** | The `j2-claude-plugins` marketplace and every J2 plugin (`j2-eng`, `compliance`, `j2-presentations`, `j2-sandbox`, the J2 forks of superpowers/codex/playwright, dbt, LaunchDarkly, the Python and TypeScript LSPs, …), Sentry, and `Bash(j2/gcloud/kubectl *)` permissions. Merged into `~/.claude/settings.json` from [`claude/settings.json`](claude/settings.json). |
-| **Packages** | `gcloud-cli` and `kubernetes-cli` on macOS; `kubernetes-client` on Fedora |
+| **Packages** | `cloud-sql-proxy`, `gcloud-cli` and `kubernetes-cli` on macOS; `kubernetes-client` on Fedora |
 | **dev-env** | Clones `j2-health/dev-env` to `~/workspace/dev-env` (it needs `gh auth login` first), and fish sources its initializers, which provide the `j2` CLI |
 | **fish** | `logs`: pick a J2 service with fzf and tail its App Engine logs |
 | **opencode** | Reminds you to run `j2 bootstrap`, which installs the team's global `opencode.json` |
